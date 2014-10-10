@@ -52,10 +52,11 @@ def input_guess(guess):
         if maxguess == 0:
             print 'You ran out of guesses.  The number was ' + str(secret_number)
             new_game()
-        if guess < secret_number:
-            print 'Higher'
         else:
-            print 'Lower'
+            if guess < secret_number:
+                print 'Higher'
+            else:
+                print 'Lower'
     
 # create frame
 frame = simplegui.create_frame("Guess the number", 300, 300)
