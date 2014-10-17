@@ -9,6 +9,7 @@ total_stops = 0
 whole_stops = 0
 interval = 100
 running_state = False
+last_stop_state = True
 
 # define helper function format that converts time
 # in tenths of seconds into formatted string A:BC.D
@@ -28,19 +29,23 @@ def format(t):
     
 # define event handlers for buttons; "Start", "Stop", "Reset"
 def start():
-    global running_state, timer
+    global running_state, timer, last_stop_state
     running_state = True
+    last_stop_state = False
     timer.start()
 
 def stop():
-    global running_state, timer, time_in_seconds
+    global running_state, last_stop_state
+    global timer, time_in_seconds
     global total_stops, whole_stops
     timer.stop()
     running_state = False
-    total_stops += 1
-    if time_in_seconds % 10 == 0:
-        whole_stops += 1
-
+    if not last_stop_state:
+        total_stops += 1
+        if time_in_seconds % 10 == 0:
+            whole_stops += 1
+    last_stop_state = True
+    
 def reset():
     global time_in_seconds, total_stops, whole_stops
     stop()
