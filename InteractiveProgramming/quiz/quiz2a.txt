@@ -1,0 +1,201 @@
+Question 1
+What typically calls an event handler?
+
+Your Answer		Score	Explanation
+
+Some code that you didn't write which generates the event.
+
+Correct	10.00	
+Correct.
+
+
+The code you write.
+
+Total		10.00 / 10.00	
+Question 2
+In CodeSkulptor, how many event handlers can be running at the same time?
+
+Your Answer		Score	Explanation
+Unlimited, i.e., 0 or more			
+1	Correct	10.00	
+Correct.
+
+0			
+Total		10.00 / 10.00	
+Question 3
+What are the three parts of a frame?
+
+Refer to the video on SimpleGUI.
+
+Your Answer		Score	Explanation
+Status Area	Correct	3.00	
+Keyboard	Correct	0.17	
+Mouse	Correct	0.17	
+Options Area	Correct	0.17	
+Canvas	Correct	3.00	
+Title	Correct	0.17	
+Control Area	Correct	3.00	
+Border	Correct	0.17	
+Background Area	Correct	0.17	
+Total		10.00 / 10.00	
+Question 4
+For the SimpleGUI-based programs in this course, we recommended breaking down an interactive Python program into seven parts. Below, these parts are listed alphabetically.
+
+Create frame
+Define classes
+Define event handlers
+Initialize global variables
+Define helper functions
+Register event handlers
+Start frame and timers
+However, in lecture, we recommended a particular ordering of these parts. Enter 7 numbers in the range 1–7, separated only by spaces, to indicate the recommended ordering of the preceding elements of an interactive Python program. For example, if you think that the first action in your program should be to register your event handlers, enter 6 as the first number in the sequence.
+
+Answer for Question 4
+You entered:
+
+Your Answer		Score	Explanation
+4	Correct	1.43	
+5	Correct	1.43	
+2	Correct	1.43	
+3	Correct	1.43	
+1	Correct	1.43	
+6	Correct	1.43	
+7	Correct	1.43	
+Total		10.00 / 10.00	
+Question 5
+Assume the following global definition is part of your program.
+
+x = 5
+If each of the following function definitions are also part of your program, which of them needs a global x declaration? You can try each definition in CodeSkulptor.
+
+Your Answer		Score	Explanation
+
+def c(y):
+    return x + y
+Correct	1.50	
+This example does not need a global declaration. You don't need a global declaration unless you are assigning to the global variable.
+
+
+def b(x,y):
+    x = x + y
+    return x
+Correct	1.50	
+This example does not need a global declaration. Here a local variable x is being assigned to. If you add a global declaration, you'll get a SyntaxError.
+
+
+def d(y):
+    y = x + y
+    return y
+Correct	1.50	
+This example does not need a global declaration. You don't need a global declaration unless you are assigning to the global variable.
+
+
+def a(y):
+    x = x + y
+    return y
+Correct	5.50	
+This example needs a global declaration. A global variable is assigned within a function, so you need a global declaration.
+
+Total		10.00 / 10.00	
+Question 6
+Consider the following code.
+
+count = 0
+
+def square(x):
+    global count
+    count += 1
+    return x**2
+
+print square(square(square(square(3))))
+What is the value of count at the end? Enter a number. (You can double check your answer in CodeSkulptor if you wish.)
+
+Answer for Question 6
+You entered:
+
+Your Answer		Score	Explanation
+4	Correct	10.00	
+Correct. Each time square is called the global variable count is increased by 1.
+
+Total		10.00 / 10.00	
+Question 7
+Consider the following code.
+
+a = 3
+b = 6
+
+def f(a):
+    c = a + b
+    return c
+Which names occur in the global scope?
+
+Your Answer		Score	Explanation
+f	Correct	2.50	
+The function name f has global scope.
+
+a	Correct	2.50	
+b	Correct	2.50	
+c	Correct	2.50	
+Total		10.00 / 10.00	
+Question 8
+Consider the following code.
+
+a = 3
+b = 6
+
+def f(a):
+    c = a + b
+    return c
+Which names occur in a local scope?
+
+Your Answer		Score	Explanation
+c	Correct	2.50	
+b	Correct	2.50	
+a	Correct	2.50	
+f	Correct	2.50	
+Total		10.00 / 10.00	
+Question 9
+Which of the following are valid calls to create_frame?
+
+Look at the documentation for SimpleGUI frames, but also try the code in CodeSkulptor.
+
+Your Answer		Score	Explanation
+f = simplegui.create_frame("My Frame", 100, 100)	Correct	4.00	
+frame = simplegui.create_frame("My Frame", 200, 200, 200, 200)	Correct	1.00	
+This is not a valid call. The call has too many arguments.
+
+frame = simplegui.create_frame(100, 100, 100)	Correct	1.00	
+This is not a valid call. The call is missing title argument.
+
+frame = simplegui.create_frame("Testing", 200, 200, 300)	Correct	4.00	
+Total		10.00 / 10.00	
+Question 10
+Which of the following are valid ways of making a canvas with a red background?
+
+Look at the documentation for SimpleGUI constants, but also try the code in CodeSkulptor.
+
+Your Answer		Score	Explanation
+
+import simplegui
+frame = simplegui.create_frame("My Frame", 100, 100, "Red")
+frame.start()
+Correct	1.00	
+
+import simplegui
+frame = simplegui.create_frame("My Frame", 100, 100)
+frame.set_canvas_background("red")
+frame.start()
+Correct	4.00	
+
+import simplegui
+frame = simplegui.create_frame("My Frame", 100, 100)
+frame.set_canvas_background(Red)
+frame.start()
+Correct	1.00	
+
+import simplegui
+frame = simplegui.create_frame("My Frame", 100, 100)
+frame.set_canvas_background("Red")
+frame.start()
+Correct	4.00	
+Total		10.00 / 10.00	
