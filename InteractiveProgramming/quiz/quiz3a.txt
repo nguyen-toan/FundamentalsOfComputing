@@ -1,0 +1,132 @@
+Question 1
+What Python operator takes two strings (e.g., "sun" and "rise") and forms the combination of these two strings, one followed by the other (e.g., "sunrise")?
+
+Your Answer		Score	Explanation
+*			
+concatenate			
+append			
++	Correct	10.00	
+concat			
+Total		10.00 / 10.00	
+Question 2
+What does the draw handler parameter represent?
+
+If you've forgotten, refer to the documentation.
+
+Your Answer		Score	Explanation
+The frame			
+Nothing — it doesn't have a parameter			
+The canvas	Correct	10.00	
+The object to be drawn			
+The location of the object to be drawn			
+Total		10.00 / 10.00	
+Question 3
+What happens if you draw text outside the canvas coordinates?
+
+Try it in CodeSkulptor.
+
+Your Answer		Score	Explanation
+Some or none of the text is shown. Conceptually, the text is drawn at whatever coordinates are given, but only whatever text fits within the canvas coordinates is shown.	Correct	10.00	
+The text coordinates are implicitly “wrapped” around using modular arithmetic, so that the text appears on the canvas			
+Causes an error			
+The text appears in the frame, but some or all of the text is shown outside the canvas area.			
+Total		10.00 / 10.00	
+Question 4
+Assume we have a canvas that is 200 pixels wide and 300 pixels high. We want to draw a green line between the upper left corner and the lower right corner. Which of the following calls will accomplish this?
+
+Try the code in CodeSkulptor.
+
+Your Answer		Score	Explanation
+canvas.draw_line((200, 0), (0, 300), 10, "Green")	Correct	1.00	
+canvas.draw_line((0, 0), (200, 300), 10, "Green")	Correct	8.00	
+canvas.draw_line((300, 0), (0, 200), 10, "Green")	Correct	1.00	
+Total		10.00 / 10.00	
+Question 5
+Consider the following function definition.
+
+def date(month, day):
+    """
+    Given numbers month and day, returns a string of the form '2/12',
+    with the month followed by the day.
+    """
+    return month + "/" + day
+
+print date(2, 12)
+This definition leads to an error. To fix it, what Python expression should replace the question marks below?
+
+def date(month, day):
+    """
+    Given numbers month and day, returns a string of the form '2/12',
+    with the month followed by the day.
+    """
+    return ???
+
+print date(2, 12)
+Your Answer		Score	Explanation
+string(month + "/" + day)			
+string(month) + "/" + string(day)			
+str(month / day)			
+str(month) + "/" + str(day)	Correct	10.00	
+str(month + "/" + day)			
+string(month / day)			
+Total		10.00 / 10.00	
+Question 6
+How many instances of the letter "l" are there in the following:
+
+1lll1l1l1l1ll1l111ll1l1ll1l1ll1ll111ll1ll1ll1l1ll1ll1ll1ll1lll1l1l1l1l1l1l1l1l1l1l1l1ll1lll1l111ll1l1l1l1l1
+Although it might be hard to tell, that string contains ones (1) and lower-case L's (l). Create a small CodeSkulptor program, and use copy-and-paste to put this string in your code. Your program should only need one function or method call.
+
+Answer for Question 6
+You entered:
+
+Your Answer		Score	Explanation
+60	Correct	10.00	
+Total		10.00 / 10.00	
+Question 7
+Where should your draw_text, draw_line, and similar drawing calls be?
+
+Your Answer		Score	Explanation
+Anywhere in your code			
+In a draw handler, or a helper function called from it	Correct	10.00	
+In the handlers for the control objects that create or change the drawing, or their helper functions			
+Total		10.00 / 10.00	
+Question 8
+Which of the following function calls are valid, i.e., don't lead to an error?
+
+Read the documentation for these functions, and also try the code in CodeSkulptor.
+
+Your Answer		Score	Explanation
+int("5")	Correct	4.00	
+float("5.4")	Correct	4.00	
+int("5.4")	Correct	1.00	
+float("5 five")	Correct	1.00	
+Total		10.00 / 10.00	
+Question 9
+Turn the following description into a CodeSkulptor program, and run it.
+
+Create a 300-by-300 canvas.
+Draw two circles with radius 20 and white lines of width 10. One is centered at (90,200) and one at (210,200).
+Draw a red line of width 40 from (50,180) to (250,180).
+Draw two red lines of width 5 from (55,170) to (90,120) and from (90,120) to (130,120).
+Draw a red line of width 140 from (180,108) to (180,160).
+The resulting picture is a simple diagram of what?
+
+Your Answer		Score	Explanation
+A house			
+An automobile	Correct	10.00	
+A person			
+A computer			
+A motorcycle			
+Total		10.00 / 10.00	
+Question 10
+The following is a diagram of an archery target.
+
+Archery target, which is a set of concentric circles, with the innermost being yellow, and the outermost being white
+To draw this in CodeSkulptor, we can put a small yellow circle with a black border on top of a slightly bigger yellow circle with a black border, … on top of a big white circle with a black border. In what order should your code draw these circles?
+
+Your Answer		Score	Explanation
+Smallest first			
+Largest first	Correct	10.00	
+Correct. Whatever you draw last appears to be on top.
+
+Total		10.00 / 10.00
