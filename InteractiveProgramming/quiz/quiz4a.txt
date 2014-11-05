@@ -1,0 +1,117 @@
+Question 1
+What built-in function will add all the numbers in a list of numbers? Just give the function name, without any parentheses or argument.
+
+You can find it in the documentation.
+
+Answer for Question 1
+You entered:
+
+Your Answer		Score	Explanation
+sum	Correct	10.00	
+Total		10.00 / 10.00	
+Question 2
+Let my_list be the list ["This", "course", "is", "great"].
+
+What is len(my_list)?
+What non-negative number is the index of "great"? I.e., how would you replace the question marks in my_list[???] so that the result is "great"?
+Submit two numbers, one for each of these two questions, separated by spaces.
+
+Answer for Question 2
+You entered:
+
+Your Answer		Score	Explanation
+4	Correct	5.00	
+3	Correct	5.00	
+Total		10.00 / 10.00	
+Question 3
+Let my_list be the list ["This", "course", "is", "great"].
+
+We can use Python's slice notation to get part of this list. What non-negative numbers can be used to get the slice ["course", "is"]? I.e., what two non-negative numbers should we put in my_list[??? : ???] to get that result?
+
+Submit the two numbers in order, separated only by spaces.
+
+Answer for Question 3
+You entered:
+
+Your Answer		Score	Explanation
+1	Correct	5.00	
+3	Correct	5.00	
+Total		10.00 / 10.00	
+Question 4
+If we want to split a list my_list into two halves, which of the following uses slices to do so correctly?
+
+More precisely, if the length of my_list is 2n, i.e., even, then the two parts should each have length n. If its length is 2n+1, i.e., odd, then the two parts should have lengths n and n+1.
+
+Your Answer		Score	Explanation
+my_list[0 : len(my_list) // 2] and my_list[len(my_list) // 2 + 1 : len(my_list)]	Correct	1.00	No, the list element at index len(my_list) // 2 is not in either part.
+my_list[0 : len(my_list) // 2 - 1] and my_list[len(my_list) // 2 : len(my_list)]	Correct	1.00	No, the list element at index len(my_list) // 2 - 1 is not in either part.
+my_list[: len(my_list) // 2] and my_list[len(my_list) // 2 :]	Correct	3.00	
+my_list[0 : len(my_list) // 2] and my_list[len(my_list) // 2 : len(my_list)]	Correct	5.00	
+Total		10.00 / 10.00	
+Question 5
+What is the distance between point [4, 7] and the nearest point on the circle centered at [2, 9] with radius 2? Provide at least 4 digits of accuracy.
+
+Hint: The distance between a point and a circle is the distance between the point and the center of the circle minus the radius of the circle. You can use the point-to-point distance code described in this week's videos.
+
+Answer for Question 5
+You entered:
+
+Your Answer		Score	Explanation
+0.8284	Correct	10.00	
+Total		10.00 / 10.00	
+Question 6
+A ball with velocity [4, 2] reflects off a vertical wall. What is its new velocity?
+
+Your Answer		Score	Explanation
+[-4, -2]			
+[4, -2]			
+[-4, 2]	Correct	10.00	
+[4, 2]			
+Total		10.00 / 10.00	
+Question 7
+Which of the following illustrate how to properly structure a keydown or keyup event handler? (For more advanced Python programmers, assume that you have just imported simplegui and haven't used from.)
+
+Your Answer		Score	Explanation
+
+def keydown_handler(key):
+    if key == KEY_MAP["left"]:
+        …
+Correct	1.00	
+
+def keydown_handler(key):
+    if key == simplegui.KEY_MAP["left"]:
+        …
+Correct	7.00	
+
+def keydown_handler(key):
+    if "left" == simplegui.KEY_MAP[key]:
+        …
+Correct	1.00	
+
+def keydown_handler(key):
+    if "left" == KEY_MAP[key]:
+        …
+Correct	1.00	
+Total		10.00 / 10.00	
+Question 8
+Assume you have a program with a keydown handler. You run it, and press a single key and hold it down continuously. How many times does the keydown handler get called?
+
+Experiment in CodeSkulptor to find out.
+
+Your Answer		Score	Explanation
+1	Correct	15.00	
+2 — once at the beginning and once when you release the key			
+Unlimited — i.e., repeatedly until you finally release the key			
+Total		15.00 / 15.00	
+Question 9
+Several keys on the keyboard, such as Shift, CapsLock, and Ctrl, typically act to modify what happens when you press other keys, rather than doing anything on their own. When using the SimpleGUI keydown handler, how are such keys treated?
+
+Experiment in CodeSkulptor to find out.
+
+Your Answer		Score	Explanation
+Modify other key presses — e.g., pressing the 'a' key creates an event with a different value than pressing Shift and 'a' together.			
+No effect — e.g., pressing the Shift key does not create or modify the behavior of any event.			
+Independent key press events — e.g., pressing Shift by itself creates an event	Correct	15.00	
+Yes, for example Shift gives the value 16.
+
+Total		15.00 / 15.00	
