@@ -1,0 +1,133 @@
+Question 1
+Which of the following are syntactically correct strings?
+
+Try each of them in CodeSkulptor.
+
+Your Answer		Score	Explanation
+Hello	Correct	1.25	This is not a string. A string must have quotation marks.
+'This course is great!'	Correct	2.50	This is a string. You can use single-quotes.
+"It's a beautiful day."	Correct	2.50	This is a string. A single-quote (apostrophe) can appear inside double-quotes.
+"Hello, world."	Correct	2.50	This is a string. You can use double-quotes.
+[Hello]	Correct	1.25	This is not a string. A string must use quotation marks.
+Total		10.00 / 10.00	
+Question 2
+To display a value in the console, what Python keyword do you use?
+
+Answer for Question 2
+You entered:
+
+Your Answer		Score	Explanation
+print	Correct	10.00	Correct.
+Total		10.00 / 10.00	
+Question 3
+In the following code, the one line starting with # is highlighted in red. What does this line mean to Python?
+
+tax_rate = 0.15
+income = 40000
+deduction = 10000
+
+# Calculate income taxes
+tax = (income - deduction) * tax_rate
+
+print tax
+Your Answer		Score	Explanation
+This is a comment aimed at the human reader. Python ignores such comments.	Correct	10.00	
+The text is stored in a special variable called #.			
+This text is printed on the console.			
+This text is used as a file name for the code.			
+This is a syntax error.			
+Total		10.00 / 10.00	
+Question 4
+Which of the following arithmetic expressions are syntactically correct?
+
+Try each of them in CodeSkulptor.
+
+Your Answer		Score	Explanation
+(8 + (1 + (2 * 4) - 3))	Correct	2.00	This example has correct syntax.
+(7 - 2) / (3 ** 2)	Correct	2.00	This example has correct syntax.
+8 / -2	Correct	2.00	
+This example has correct syntax. You can put a negative sign in front of a number like this.
+
+3 * ((2 - 9) + 4)) * (2 + (1 - 3))	Correct	2.00	This example has incorrect syntax. This has an extra closing parenthesis.
+9 - (2 - (4 * 3)	Correct	2.00	This example has incorrect syntax. This is missing closing parenthesis.
+Total		10.00 / 10.00	
+Question 5
+You would like to make it so that the variable ounces has the value 16, thus representing one pound. What simple Python statement will accomplish this?
+
+Your Answer		Score	Explanation
+16 = ounces	Correct	1.00	Invalid syntax.
+ounces = 16	Correct	8.00	
+ounces == 16	Correct	1.00	Means something different
+Total		10.00 / 10.00	
+Question 6
+A gram is equal to 0.035274 ounces. Assume that the variable mass_in_ounces has a value representing a mass in ounces. Which arithmetic expressions below using the variable mass_in_ounces represent the equivalent mass in grams?
+
+Think about it mathematically, but also test these expressions in CodeSkulptor. If you are still confused, you might check out the student tutorial video by Kelly on unit conversions in the "Concepts and Examples" page.
+
+Your Answer		Score	Explanation
+mass_in_ounces * 0.035274	Correct	0.67	
+0.035274 / mass_in_ounces	Correct	0.67	
+mass_in_ounces / 0.035274	Correct	8.00	
+0.035274 * mass_in_ounces	Correct	0.67	
+Total		10.00 / 10.00	
+Question 7
+Which of the following can be used as a variable name?
+
+Try using each in CodeSkulptor.
+
+Your Answer		Score	Explanation
+16ounces	Correct	1.00	No, this is not a valid variable name. A variable name cannot begin with digits.
+__number__	Correct	2.00	
+This is a valid variable name. However, convention says that Python variable names starting and ending with underscores only in special circumstances.
+
+ounces	Correct	2.00	This is a valid variable name.
+my.number	Correct	1.00	
+No, this is not a valid variable name. While a name can contain a period, it is considered a compound of two names, not a single name. The first part is the name of a module or class, as we will see later. The second part is the name of a variable or function.
+
+MYnumber	Correct	2.00	
+This is a valid variable name. However, convention says that Python variables shouldn't start with a capital letter.
+
+my_number	Correct	2.00	
+This is a valid variable name., You can use underscores.
+
+Total		10.00 / 10.00	
+Question 8
+Assume you have values in the variables x and y. Which statement(s) would result in x having the sum of the current values of x and y?
+
+Test your answer in CodeSkulptor.
+
+Your Answer		Score	Explanation
+x += y + x	Correct	1.00	
+x += x + y	Correct	1.00	
+x += y	Correct	4.00	
+x = x + y	Correct	4.00	
+Total		10.00 / 10.00	
+Question 9
+Python file names traditionally end in what characters after a period? Don't include the period.
+
+Answer for Question 9
+You entered:
+
+Your Answer		Score	Explanation
+py	Correct	10.00	
+Total		10.00 / 10.00	
+Question 10
+We encourage you to save your CodeSkulptor Python files where?
+
+Your Answer		Score	Explanation
+
+In "the cloud" only
+
+
+On your computer only
+
+
+In "the cloud" and on your computer
+
+Correct	10.00	
+Correct.
+
+
+Nowhere — CodeSkulptor automatically saves your files for you
+
+Total		10.00 / 10.00
