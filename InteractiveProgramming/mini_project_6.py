@@ -33,13 +33,8 @@ VALUES = {'A':1, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10,
 # define card class
 class Card:
     def __init__(self, suit, rank):
-        if (suit in SUITS) and (rank in RANKS):
-            self.suit = suit
-            self.rank = rank
-        else:
-            self.suit = None
-            self.rank = None
-            print "Invalid card: ", suit, rank
+        self.suit = suit
+        self.rank = rank
 
     def __str__(self):
         return self.suit + self.rank
@@ -54,7 +49,7 @@ class Card:
         card_loc = (CARD_CENTER[0] + CARD_SIZE[0] * RANKS.index(self.rank), 
                     CARD_CENTER[1] + CARD_SIZE[1] * SUITS.index(self.suit))
         canvas.draw_image(card_images, card_loc, CARD_SIZE, [x + CARD_CENTER[0], y + CARD_CENTER[1]], CARD_SIZE)
-        if faceDown == True:
+        if faceDown:
             card_loc = (CARD_BACK_CENTER[0], CARD_BACK_CENTER[1])
             canvas.draw_image(card_back, card_loc, CARD_BACK_SIZE, [x + CARD_BACK_CENTER[0], y + CARD_BACK_CENTER[1]], CARD_SIZE)
             
@@ -78,7 +73,7 @@ class Hand:
             if card.get_rank() == 'A':
                 ace = True
         if ace and sum <= 10:
-            return sum+10
+            return sum + 10
         else:
             return sum
     
@@ -128,51 +123,42 @@ def deal():
     player.hit(deck)
     dealer.hit(deck)
     player.hit(deck)
-    #print "Dealer initially has "+str(dealer)+" with the value of "+str(dealer.get_value())
-    #print "Player initially has "+str(player)+" with the value of "+str(player.get_value())
 
 
 def hit():
     global in_play, outcome, score, current
-    if in_play == True:
+    if in_play:
         player.hit(deck)
-        #print "Player has " +str(player)+" with the value of "+str(player.get_value())
-    # if the hand is in play, hit the player
+        # if the hand is in play, hit the player
         if player.busted():
             outcome = 'You went bust!'
             current = 'New deal?'
             in_play = False
-            #print outcome
             score -= 1
         if player.get_value() == 21:
             in_play = False
             outcome = 'You got BLACKJACK!'
             current = 'New deal?'
-            #print outcome
             score += 1
+
 def stand():
     global outcome, in_play, score, current
     if in_play == True:
         # if hand is in play, repeatedly hit dealer until his hand has value 17 or more
         while dealer.get_value() < 17:
             dealer.hit(deck)
-            #print "Dealer has " +str(dealer)+" with the value of "+str(dealer.get_value())
             if dealer.busted():
                 outcome = "Dealer went bust!"
-                #print outcome
                 score += 1
         # assign a message to outcome, update in_play and score        
         if not dealer.busted() and dealer.get_value() > player.get_value():
             outcome = "Dealer won."
-            #print outcome
             score -= 1
             
         if not dealer.busted() and dealer.get_value() == player.get_value():
             outcome = "It's a tie."
-            #print outcome
         if not dealer.busted() and dealer.get_value() < player.get_value():
             outcome = "You won."
-            #print outcome
             score += 1
     in_play = False
     current = "New deal?"
