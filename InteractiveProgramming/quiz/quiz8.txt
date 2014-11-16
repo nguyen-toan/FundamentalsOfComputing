@@ -1,0 +1,111 @@
+Question 1
+Which of the following is valid notation for a set in CodeSkulptor?
+
+Your Answer		Score	Explanation
+{}	Correct	2.00	
+No, this is a dictionary.
+
+set()	Correct	4.00	
+set([])	Correct	4.00	
+Total		10.00 / 10.00	
+Question 2
+Which of the following operations can mutate set s? You may want to try some examples in CodeSkulptor and refer to the documentation.
+
+Your Answer		Score	Explanation
+s.update(s)	Inorrect	0.00	
+While s.update() can change s, a set unioned with itself is just the same set.
+
+s.intersection(t)	Correct	1.00	
+s.discard(x)	Correct	1.00	
+s.intersection_update(t)	Correct	5.00	
+t.intersection(s)	Correct	1.00	
+t.intersection_update(s)	Correct	1.00	
+Total		9.00 / 10.00	
+Question 3
+Which of the following always give the same result as s.union(t)?
+
+Refer to the CodeSkulptor documentation or try them on examples.
+
+Your Answer		Score	Explanation
+t.union(t.difference(s))	Correct	1.00	
+s.union(t.difference(s))	Correct	4.00	
+s.update(t)	Correct	1.00	
+t.union(s)	Correct	4.00	
+Total		10.00 / 10.00	
+Question 4
+A set is an unordered collection of distinct elements. Which of the following problem contexts represent instances of this idea?
+
+Your Answer		Score	Explanation
+Alphabetized names	Correct	1.00	
+No, sets are not ordered.
+
+Names for everyone taking this course	Correct	1.00	
+No, we could easily have multiple students with the same name.
+
+Rooms in a building	Correct	8.00	
+Total		10.00 / 10.00	
+Question 5
+How many frames per second are typically projected in modern movies? How many times per second is the draw handler typically called in CodeSkulptor?
+
+Enter two numbers representing these frame rates in frames per second. Use only spaces to separate the numbers.
+
+Answer for Question 5
+You entered:
+
+Your Answer		Score	Explanation
+24	Correct	5.00	
+12	Incorrect	0.00	
+Total		5.00 / 10.00	
+Question 6
+For this week, the mini-project defines and uses a Sprite class to support animations. What attribute (also known as a field) can be used to help index the sub-images forming an animated sprite? (If you are stuck, review the bonus phase in the mini-project description.)
+
+Your Answer		Score	Explanation
+image_size			
+lifespan			
+angle			
+vel			
+image			
+sound			
+angle_vel			
+radius			
+animated	Inorrect	0.00	
+image_center			
+age			
+pos			
+Total		0.00 / 10.00	
+Question 7
+Consider a horizontally-tiled image where each sub-image has the same size. If each sub-image is of size 60×90 (in pixels), what is the horizontal distance (in pixels) between the centers of adjacent sub-images?
+
+Your Answer		Score	Explanation
+90	Inorrect	0.00	
+120			
+180			
+60			
+Total		0.00 / 10.00	
+Question 8
+How many distinct numbers are printed by the following code? Enter the count.
+
+def next(x):
+    return (x ** 2 + 79) % 997
+
+x = 1
+for i in range(1000):
+    print x
+    x = next(x)
+Hint: Consider how editing the code to use a set could help solve the question.
+
+Answer for Question 8
+You entered:
+
+Your Answer		Score	Explanation
+46	Correct	20.00	
+Total		20.00 / 20.00	
+Question 9
+Which instructor exhibits the best coding style?
+
+Your Answer		Score	Explanation
+Joe			
+Stephen			
+Scott			
+John	Correct	10.00	John's programming tips are the best. We need to see more of him.
+Total		10.00 / 10.00	
